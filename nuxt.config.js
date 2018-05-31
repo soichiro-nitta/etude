@@ -60,7 +60,10 @@ module.exports = {
   /*
   ** nuxt-modules
   */
-  modules: ['nuxt-device-detect'],
+  modules: [
+    '@nuxtjs/pwa',
+    'nuxt-device-detect'
+  ],
   /*
   ** Build configuration
   */

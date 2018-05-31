@@ -1,11 +1,20 @@
 <template lang="pug">
   .default
+    TheBackground
     #scrollArea
       nuxt
+    //- TheNav
 </template>
 
 <script>
+import TheNav from '~/components/TheNav'
+import TheBackground from '~/components/TheBackground'
+
 export default {
+  components: {
+    TheBackground,
+    TheNav
+  },
   mounted () {
     const progress = document.getElementsByClassName('nuxt-progress')[0]
     progress.style.height = this.$device.isMobile ? '10px' : '20px'
@@ -29,7 +38,6 @@ export default {
     overflow-y scroll
     -webkit-overflow-scrolling touch
     -webkit-backface-visibility hidden
-    background #191919
     backface-visibility hidden
     z-index 0
   #scrollArea>div
