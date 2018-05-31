@@ -8,15 +8,9 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'eslint:recommended',
     'plugin:vue/recommended',
-    'plugin:prettier/recommended'
+    'standard'
   ],
   plugins: ['vue'],
-  rules: {
-    semi: [2, 'never'],
-    'no-console': 'off',
-    'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { singleQuote: true, semi: false }]
-  }
+  rules: {}
 }

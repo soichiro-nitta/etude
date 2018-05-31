@@ -53,7 +53,10 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#444',
+    height: '10px'
+  },
   /*
   ** nuxt-modules
   */
@@ -62,7 +65,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extend(config, { isDev, isClient }) {
+    extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -71,6 +74,15 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // find the stylus loader
+      const stylus = config.module.rules[0].options.loaders.stylus.find(e => e.loader == 'stylus-loader')
+      // extend default options
+      Object.assign(stylus.options, {
+        import: [
+          '~assets/stylus/variables.styl',
+          '~assets/stylus/mixins.styl'
+        ]
+      })
     }
   }
 }
