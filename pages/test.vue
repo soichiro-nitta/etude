@@ -35,10 +35,7 @@ export default {
     +large()
       font-size 30px
   .lottie
-    margin-left -80%
-    width 260%
+    margin 50px auto 0
+    width 80%
     height auto
-    +large()
-      margin 0 auto
-      width 80%
 </style>
