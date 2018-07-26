@@ -37,8 +37,8 @@ module.exports = {
       }
     ],
     link: [
-      { rel: 'icon', href: '/icon.png' },
-      { rel: 'apple-touch-icon', href: '/icon.png' },
+      // { rel: 'icon', href: '/icon.png' },
+      // { rel: 'apple-touch-icon', href: '/icon.png' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,700'
@@ -87,5 +87,6 @@ module.exports = {
         ]
       })
     }
-  }
+  },
+  mode: 'spa'
 }
