@@ -1,6 +1,6 @@
 <template lang='pug'>
-  .index
-    .title 01. Hello
+  .test
+    .title 02. test
     .lottie(ref='lottie')
 </template>
 
@@ -13,7 +13,7 @@ export default {
       container: this.$refs.lottie,
       renderer: 'svg',
       loop: true,
-      path: '/json/hello.json'
+      path: '/json/test.json'
     }).play()
   },
   head: {
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
-.index
+.test
   .title
     font-size 18px
     font-weight bold
