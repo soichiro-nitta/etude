@@ -1,6 +1,6 @@
-# etude
+# etude.netlify.app
 
-> Nuxt.js project
+https://etude.netlify.app/
 
 ## Build Setup
 
